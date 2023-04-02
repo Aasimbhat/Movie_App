@@ -51,12 +51,19 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                for (final movie in movies) MovieListItem(
-                  imageUrl: movie.imagepath,
-                    name: movie.name,
-                     information: '${movie.year} |${movie.category} | ${movie.duration.inHours}h ${movie.duration.inMinutes.remainder(60)}m',
-                  
-                )
+                for (final movie in movies)
+                 InkWell(
+                  onTap: () {
+                    
+                    
+                  },
+                   child: MovieListItem(
+                    imageUrl: movie.imagepath,
+                      name: movie.name,
+                       information: '${movie.year} |${movie.category} | ${movie.duration.inHours}h ${movie.duration.inMinutes.remainder(60)}m',
+                    
+                                 ),
+                 )
 
                 
             ],
